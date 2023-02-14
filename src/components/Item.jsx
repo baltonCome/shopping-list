@@ -63,7 +63,7 @@ const Item = ({ item }) => {
                     <Col style={{ textAlign: 'right' }}>
                         <Row className='mx-3'>
                         {
-                            item.bought ?  <Button className= "mb-2" onClick={boughtClick} outline color="success">Marcar comprado<FaCheck/></Button>
+                            !item.bought ?  <Button className= "mb-2" onClick={boughtClick} outline color="success">Marcar comprado<FaCheck/></Button>
                             :
                             <Button className="mb-2" color="success">Comprado <FaCheck/></Button>
                         }
