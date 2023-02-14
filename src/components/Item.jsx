@@ -10,8 +10,7 @@ const Item = ({ item }) => {
     }
 
     const boughtClick = () => {
-
-        api.patch(`items/${item.id}`, !item.bought).then(window.location.href='/')
+        api.patch(`items/${item.id}`, {bought: !item.bought} ).then(window.location.href='/')
     }
 
     return (
@@ -61,9 +60,15 @@ const Item = ({ item }) => {
                             {item.quantity * item.price} MZN
                         </Badge>
                     </Col>
-                    <Col style={{ textAlign: 'right' }}>  
-                        <Button onClick={boughtClick} outline color="success">Comprado<FaCheck/></Button>{' '}
+                    <Col style={{ textAlign: 'right' }}>
+                        <Row className='mx-3'>
+                        {
+                            item.bought ?  <Button className= "mb-2" onClick={boughtClick} outline color="success">Marcar comprado<FaCheck/></Button>
+                            :
+                            <Button className="mb-2" color="success">Comprado <FaCheck/></Button>
+                        }
                         <Button onClick={deleteClick}   outline color="danger">Apagar<FaTrash/></Button>
+                        </Row>  
                     </Col>
                 </Row>
             </CardBody>

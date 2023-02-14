@@ -16,7 +16,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 550px;
+  max-width: 600px;
 }
 
 .header {
@@ -28,11 +28,11 @@ code {
 }
 
 .new {
-  max-width: 550px;
+  max-width: 600px;
   align-items: center;
   justify-content: center;
 }
 
 .fit-width{
-  width: 550px;
+  width: 600px;
 }

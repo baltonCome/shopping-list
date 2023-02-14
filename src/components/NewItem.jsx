@@ -29,6 +29,7 @@ const NewItem = () => {
             quantity,
             measuring_unit : metric,
             priority: priority.value.toLowerCase(),
+            baught : false,
             date : new Date().toLocaleString()
         }
         await api.post("items", item).then(window.location.href='/')
